@@ -53,18 +53,13 @@
 							senses!
 						</p>
 					</div>
-					<div class="col-12 col-sm align-self-center">
-						<div class='row align-self-center'>
-							<div class='col-12 col-sm-3 align-self-center'>
-								<img src="./img/logo.png" class='img-fluid' alt="">
-							</div>
-							<div class='offset-sm-1 col-12 col-sm align-self-center'>
-								<a href='#card-reserve' role='button' class='px-5 btn btn-sm btn-warning'>
-									<h5>Reserve Table</h5>
-								</a>
-							</div>
-						</div>
-
+					<div class='col-12 col-sm-3 align-self-center'>
+						<img src="./img/logo.png" class='img-fluid' alt="">
+					</div>
+					<div class='col-12 col-sm align-self-center'>
+						<a href='#card-reserve' role='button' class='btn-block btn btn-sm btn-warning'>
+							<h5>Reserve Table</h5>
+						</a>
 					</div>
 				</div>
 			</div>
@@ -109,7 +104,8 @@
 								drinks. All for just $19.99 per person
 							</p>
 						</div>
-						<img src="./img/buffet.png" class='d-flex mr-3 align-self-center img-thumbnail' alt="Buffet">
+						<img src="./img/buffet.png" class='img d-flex ml-3 align-self-center img-thumbnail'
+							alt="Buffet">
 					</div>
 				</div>
 			</div>
@@ -137,43 +133,73 @@
 			</div>
 
 			<!--reserve a table-->
-			<div id='card-reserve' class='row row-content align-items-center'>
-				<div class='col-2 col-sm-2'></div>
+			<div id='card-reserve' class='row row-content justify-content-center'>
 				<div class='col-sm-8'>
 					<div class='card'>
-						<h1 class='card-header bg-warning text-white '>Reserve a Table</h1>
+						<h1 class='card-header bg-warning text-white'>Reserve a Table</h1>
 						<div class="card-body">
-							<div class='row'>
-								<div class='col-12 col-sm-2'>Number of Guests</div>
-								<div class='col-12 col-sm'>
-									<span class='mr-3'><input class='mr-2' type="radio">1</span><span
-										class='mr-3'><input class='mr-2' type="radio">2</span><span class='mr-3'><input
-											class='mr-2' type="radio">3</span><span class='mr-3'><input class='mr-2'
-											type="radio">4</span><span class='mr-3'><input class='mr-2'
-											type="radio">5</span><span class='mr-3'><input class='mr-2'
-											type="radio">6</span>
+							<form action="">
+								<div class='row form-group'>
+									<label for="inlineRadioOptions" class='col-form-label col-sm-2'>Number of
+										Guests</label>
+									<div class='col-sm-10'>
+										<div class='form-check form-check-inline'>
+											<input type="radio" id='inlineRadio1' class='form-check-input'
+												value='option1' name='inlineRadioOptions'>
+											<label for="inlineRadio1" class='form-check-label'>1</label>
+										</div>
+										<div class='form-check form-check-inline'>
+											<input type="radio" id='inlineRadio2' class='form-check-input'
+												value='option2' name='inlineRadioOptions'>
+											<label for="inlineRadio2" class='form-check-label'>2</label>
+										</div>
+										<div class='form-check form-check-inline'>
+											<input type="radio" id='inlineRadio3' class='form-check-input'
+												value='option3' name='inlineRadioOptions'>
+											<label for="inlineRadio3" class='form-check-label'>3</label>
+										</div>
+										<div class='form-check form-check-inline'>
+											<input type="radio" id='inlineRadio4' class='form-check-input'
+												value='option4' name='inlineRadioOptions'>
+											<label for="inlineRadio4" class='form-check-label'>4</label>
+										</div>
+										<div class='form-check form-check-inline'>
+											<input type="radio" id='inlineRadio5' class='form-check-input'
+												value='option5' name='inlineRadioOptions'>
+											<label for="inlineRadio5" class='form-check-label'>5</label>
+										</div>
+										<div class='form-check form-check-inline'>
+											<input type="radio" id='inlineRadio6' class='form-check-input'
+												value='option6' name='inlineRadioOptions'>
+											<label for="inlineRadio6" class='form-check-label'>6</label>
+										</div>
+									</div>
 								</div>
-							</div>
-							<div class='row'>
-								<div class='col-12 col-sm-2'>Date and Time</div>
-								<div class='col-12 col-sm-4'>
-									<input type="text" class='form-control' placeholder='Date'>
+								<div class="form-group row">
+									<label for="dateAndTime" class="col-12 col-sm-2 col-form-label">Date and
+										Time</label>
+									<div class="col-6 col-sm-5">
+										<input type="text" class="form-control" id="date" name="date"
+											placeholder="Date">
+									</div>
+									<div class="col-6 col-sm-5">
+										<input type="text" class="form-control" id="time" name="time"
+											placeholder="Time">
+									</div>
 								</div>
-								<div class='col-12 col-sm-4'>
-									<input type="text" class='form-control' placeholder='Time'>
+								<div class="form-group row">
+									<div class="offset-sm-2 col-sm-10">
+										<button type="submit" class="btn btn-primary">Reserve</button>
+									</div>
 								</div>
-							</div>
-							<div class='row'>
-								<div class='offset-sm-2 col-sm-10 col-12 mt-3'>
-									<input type="button" class='btn btn-primary' value='Reserve'>
-								</div>
-							</div>
-
+							</form>
 						</div>
 					</div>
 				</div>
-				<div class='col-2 col-sm-2'></div>
 			</div>
+		</div>
+		<div class='col-2 col-sm-2'></div>
+		</div>
 
 		</div>
 
