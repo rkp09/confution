@@ -37,9 +37,50 @@
 					</li>
 				</ul>
 			</div>
+			<span class='navbar-text'>
+				<a href="" data-toggle='modal' data-target='#loginModal'>
+					<span class="fa fa-sign-in"> Login</span>
+				</a>
+			</span>
 		</nav>
+		<div id="loginModal" class='modal fade' role='dialog'>
+			<div class='modal-dialog modal-lg' role='content'>
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class='modal-title'>Login</h4>
+						<button type='button' class='close' data-dismiss='modal'>&times;</button>
 
+					</div>
+					<div class="modal-body">
+						<form action="">
+							<div class='form-row'>
+								<div class="form-group col-sm-4">
+									<label for="exampleInputEmail3" class="sr-only">Email address</label>
+									<input type="email" class="form-control form-control-sm mr-1"
+										id='exampleInputEmail3' placeholder="Enter email">
+								</div>
+								<div class="form-group col-sm-4">
+									<label for="exampleInputPassword3" class="sr-only">password</label>
+									<input type="password" class="form-control form-control-sm mr-1"
+										id="exampleInputPassword3" placeholder='Passowrd'>
+								</div>
+								<div class="col-sm-auto">
+									<div class="form-check">
+										<input id='check' class="form-check-input" type='checkbox'>
+										<label for='check' class="form-check-label">Remember Me</label>
+									</div>
+								</div>
 
+							</div>
+							<div class="form-row">
+								<button class="btn btn-secondary btn-sm ml-auto" data-dismiss='modal'>cancel</button>
+								<button class="btn btn-primary btn-sm ml-1">Sign In</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
 		<!--container header-->
 		<header class="jumbotron">
 			<div class="container">
@@ -57,8 +98,10 @@
 						<img src="./img/logo.png" class='img-fluid' alt="">
 					</div>
 					<div class='col-12 col-sm align-self-center'>
-						<a href='#card-reserve' role='button' class='btn-block btn btn-sm btn-warning'>
-							<h5>Reserve Table</h5>
+						<a href='#card-reserve' role='button' class='btn-block btn btn-sm btn-warning'
+							data-toggle='tooltip' data-html='true'
+							title='or call us at <br><strong> +852 12345678 </strong>' data-placement='bottom'>
+							Reserve Table
 						</a>
 					</div>
 				</div>
@@ -140,7 +183,7 @@
 						<div class="card-body">
 							<form action="">
 								<div class='row form-group'>
-									<label for="inlineRadioOptions" class='col-form-label col-sm-2'>Number of
+									<label for="inlineRadioOptions" class='col-form-label col-sm'>Number of
 										Guests</label>
 									<div class='col-sm-10'>
 										<div class='form-check form-check-inline'>
@@ -176,7 +219,7 @@
 									</div>
 								</div>
 								<div class="form-group row">
-									<label for="dateAndTime" class="col-12 col-sm-2 col-form-label">Date and
+									<label for="dateAndTime" class="col-12  col-form-label">Date and
 										Time</label>
 									<div class="col-6 col-sm-5">
 										<input type="text" class="form-control" id="date" name="date"
@@ -188,7 +231,7 @@
 									</div>
 								</div>
 								<div class="form-group row">
-									<div class="offset-sm-2 col-sm-10">
+									<div class="col">
 										<button type="submit" class="btn btn-primary">Reserve</button>
 									</div>
 								</div>
@@ -260,6 +303,11 @@
 		<script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
 		<script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
 		<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+		<script>
+			$(document).ready(function () {
+				$('[data-toggle="tooltip"').tooltip();
+			});
+		</script>
 	</body>
 
 </html>
