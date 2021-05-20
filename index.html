@@ -37,12 +37,18 @@
 					</li>
 				</ul>
 			</div>
+
+
+			<!--login area-->
 			<span class='navbar-text'>
-				<a href="" data-toggle='modal' data-target='#loginModal'>
+
+				<a id='login-btn-modal'>
 					<span class="fa fa-sign-in"> Login</span>
 				</a>
 			</span>
 		</nav>
+
+		<!--modal of login-->
 		<div id="loginModal" class='modal fade' role='dialog'>
 			<div class='modal-dialog modal-lg' role='content'>
 				<div class="modal-content">
@@ -81,6 +87,10 @@
 				</div>
 			</div>
 		</div>
+
+
+
+
 		<!--container header-->
 		<header class="jumbotron">
 			<div class="container">
@@ -98,7 +108,7 @@
 						<img src="./img/logo.png" class='img-fluid' alt="">
 					</div>
 					<div class='col-12 col-sm align-self-center'>
-						<button data-target='#dinner-booking' data-toggle='modal' data-dismiss='' role='button'
+						<button id='reserve-table-btn' role='button'
 							class='btn-block btn btn-sm btn-warning text-white'>
 							Reserve Table
 						</button>
@@ -106,10 +116,13 @@
 				</div>
 			</div>
 		</header>
+
+
 		<!--main content of the page-->
 		<div class="container">
 			<div class="row row-content">
 				<div class='col'>
+					<!--carousel slider-->
 					<div id="mycarousel" class='carousel slide' data-ride='carousel'>
 						<ol class="carousel-indicators">
 							<li class="active" data-target='#mycarousel' data-slide-to='0'></li>
@@ -170,11 +183,11 @@
 					</div>
 				</div>
 			</div>
-
-
 		</div>
 
-		<!--reserve a table-->
+
+
+		<!--using modal reserve a table-->
 		<div id='dinner-booking' class="modal fade" role='dialog'>
 			<div class="modal-dialog" role='content'>
 				<div class="modal-content">
@@ -259,6 +272,9 @@
 				</div>
 			</div>
 		</div>
+
+
+
 		<!--footer-->
 		<footer class="footer">
 			<div class="container">
@@ -331,6 +347,23 @@
 					}
 				});
 
+				// reserve button toggling and data showing
+				$('#reserve-table-btn').click(function () {
+					if ($('#dinner-booking').modal('show')) {
+						$('#dinner-booking').modal();
+					} else {
+						$('#dinner-booking').modal('show')
+					};
+				});
+
+				// login button toggling and data showing
+				$('#login-btn-modal').click(function () {
+					if ($('#loginModal').modal('show')) {
+						$('#loginModal').modal();
+					} else {
+						$('#loginModal').modal('show');
+					}
+				});
 			});
 		</script>
 
